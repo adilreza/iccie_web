@@ -200,9 +200,9 @@ ul#nav li
 
 ul#nav li
 { float: left;
-  font: bold 120% Arial, Helvetica, sans-serif;
+  font: bold 90% Arial, Helvetica, sans-serif;
   height: 24px;
-  margin: 10px 0 0 17px;
+  margin: 10px 0 0 2px;
   text-shadow: 1px 1px #000;
   padding: 6px 20px 0 20px;
   background: transparent; 

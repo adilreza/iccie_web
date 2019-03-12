@@ -10,4 +10,13 @@ class iccie_maincontroller extends Controller
     {
         return view('index');
     }
+
+    public function master()
+    {
+        return view('layout.master');
+    }
+
+
+
+
 }
