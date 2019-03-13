@@ -149,7 +149,7 @@ class admin_controller extends Controller
 
         }
         $make_array = array('post_title'=>$post_title, 'display_image'=>$image_name, 'main_content'=>$main_content,'admin_name'=>session('admin_name') );
-        DB::table('article_tables')->insert($make_array);
+        DB::table('home_page_articles')->insert($make_array);
         //DB::table('article_tables')->where('id',$article_id)->update(['blasting'=>'already published']);
         return view("admin.admin_panel.library_text_editor")->with('msg_status','success');
 
