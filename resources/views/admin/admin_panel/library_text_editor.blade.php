@@ -18,10 +18,10 @@
                     @endif
 
                     <div class="card-body wizard-content">
-                        <h2 class="card-title text-center">Basic library editing section...</h2>
+                        <h2 class="card-title text-center">Home page article editing section...</h2>
                         <hr>
                         <h6 class="card-subtitle"></h6>
-                    <form id="example-form" class="m-t-40" enctype="multipart/form-data" method="post" action="{{ URL::to('admin/library_text_editor') }}">
+                    <form id="example-form" class="m-t-40" enctype="multipart/form-data" method="post" action="{{ URL::to('admin/home_page_article') }}">
                             <div>
                                     {{ csrf_field() }}
 
@@ -29,17 +29,7 @@
                                 <section>
                                     <label for="post_title">Article Title</label>
                                     <input id="post_title" name="post_title" type="text" class="required form-control">
-                                    <br>
-                                    <select class="form-control" required name="application_type">
-                                            <option value="Film Stress">Film Stress</option>
-                                            <option value="Film Adhension">Film Adhension</option>
-                                            <option value="Laser Scanning">Laser Scanning</option>
-                                            <option value="Thin Wafer Metrology">Thin Wafer Metrology</option>
-                                            <option value="Electrical Characterization">Electrical Characterization</option>
-                                            <option value="Raman Spectroscopy">Raman Spectroscopy</option>
-                                            <option value="3DIC TSV Process Control">3DIC TSV Process Control</option>
-                                            <option value="Low Coherence Interferometry">Low Coherence Interferometry</option>
-                                    </select>
+                                    
                                     <br>
                                     <div class=row>
                                         <div class="col-md-6">

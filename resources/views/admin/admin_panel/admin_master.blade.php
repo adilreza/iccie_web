@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="adil reza">
     <!-- Favicon icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('fsm_all_web_file/fsm_image_gallery/logo/fsm_logo_png.png') }}">
+    <link rel="shortcut icon" href="{{URL::asset('iccie_all_web_file/images/ICCIE_training_badge-min.png')}}" type="image/x-icon">
     <title>@yield('page_title')</title>
     <!-- Custom CSS -->
     <link href="{{URL::asset('iccie_admin/assets/libs/flot/css/float-chart.css')}}" rel="stylesheet">
@@ -63,8 +63,8 @@
                         <!-- Logo icon -->
                         <b class="logo-icon p-l-10">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            <!-- Dark Logo icon -->
-                            <img style="height:40px; width:75px;" src="{{URL::asset('fsm_all_web_file/fsm_image_gallery/logo/fsm_logo_png.png')}}" alt="homepage" class="light-logo" />
+                            
+                            <img style="height:35px; width:50px;" src="{{URL::asset('iccie_all_web_file/basic_image/iccie.png')}}" alt="ICCIE" class="light-logo" />
                            
                         </b>
                         <!--End Logo icon -->
@@ -72,7 +72,7 @@
                         <span class="logo-text">
                              <!-- dark Logo text -->
                              {{-- <img src="{{URL::asset('fsm_admin/assets/images/logo-text.png')}}" alt="homepage" class="light-logo" /> --}}
-                             <h3 style="margin-top:10px;margin-left:8px;" id="fsm_name" class="animated pulse "><span style="color:orange;">FSM</span> Admin</h3>
+                             <h3 style="margin-top:10px;margin-left:8px;" id="fsm_name" class="animated pulse "><span style="color:orange;">ICCIE</span> Admin</h3>
                             
                         </span>
                         <!-- Logo icon -->
@@ -139,7 +139,7 @@
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Log Out</a>
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -200,40 +200,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- ============================================================== -->
-                        <!-- End Messages -->
-                        <!-- ============================================================== -->
-
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{URL::asset('fsm_admin/assets/images/users/1.jpg')}}" alt="user" class="rounded-circle" width="31"></a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{URL::to('/admin/logout')}}"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                                <div class="dropdown-divider"></div>
-                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
-                            </div>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
+                        
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+       
         <aside class="left-sidebar" data-sidebarbg="skin5">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -316,6 +288,7 @@
             @yield('drf_details_page')
             @yield('rfq_from_client')
             @yield('rfq_replay_admin')
+            @yield('admin_login')
 
 
 
@@ -336,7 +309,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by FSM-admin. Designed and Developed by <a href="http://www.frontiersemi.com">frontiersemi</a>.
+                    Copyright &#169 ICCIE . All rights reserved.Powered by Computer Science & Engineering, <a href="http://www.ruet.ac.bd/">RUET.</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -355,7 +328,7 @@
     <script src="{{URL::asset('iccie_admin/assets/libs/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{URL::asset('iccie_admin/assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
-    <script src="{{URL::asset('fsm_admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{URL::asset('iccie_admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('iccie_admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}"></script>
     <script src="{{URL::asset('iccie_admin/assets/extra-libs/sparkline/sparkline.js')}}"></script>
     <!--Wave Effects -->
