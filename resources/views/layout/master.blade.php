@@ -62,7 +62,7 @@
         <ul id="nav">
           <!--<li id="tabs01" onclick="showStuff(this)"><a href="..\index.html" style="text-decoration: none; color: white;">Home</a></li>-->
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/')}}">Home</a></li>
-		  <li id="tabs02" onclick="showStuff(this)">Committee</li>
+        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/committee_member')}}">Committee</a></li>
       <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
           <li id="tabs04" onclick="showStuff(this)">Call for Paper</li>
           <li id="tabs05" onclick="showStuff(this)"> Camera Ready Submission</li>
@@ -74,11 +74,11 @@
 </nav>	
 
 
-    <div id="site_content" style="height:760px;">	
+    <div id="site_content" style="">	
         
         <div class="container" style="height:100%;width:100%;">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-9" >
 
 
                     @yield('home_page')
@@ -146,14 +146,6 @@
 <footer style=""> 
 	  Copyright &#169 ICCIE . All rights reserved.Powered by Computer Science & Engineering, RUET.
 </footer>
-
-
-<script>
-  document.documentElement.scrollTop = document.body.scrollTop = 450;
-</script>
-
-
-
 
 
 

@@ -32,16 +32,16 @@
                         </a>
                     </div>
                      <!-- Column -->
-                    <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="{{URL::to('#')}}">
+                     <div class="col-md-6 col-lg-2 col-xlg-3">
+                            <a href="{{URL::to('/admin/home/add_committee')}}">
                             <div class="card card-hover">
-                                <div class="box bg-warning text-center">
-                                    <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                                    <h6 class="text-white">give sample report</h6>
+                                <div class="box bg-success text-center">
+                                    <h1 class="font-light text-white"><i class="fas fa-users"></i></h1>
+                                    <h6 class="text-white">Add Committee </h6>
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <a href="{{URL::to('#')}}">
@@ -100,11 +100,11 @@
                     
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="{{URL::to('/admin/client_mail_list')}}">
+                        <a href="{{URL::to('/admin/home/add_committee')}}">
                         <div class="card card-hover">
                             <div class="box bg-success text-center">
                                 <h1 class="font-light text-white"><i class="fas fa-users"></i></h1>
-                                <h6 class="text-white">Check clients</h6>
+                                <h6 class="text-white">Add Committee Member</h6>
                             </div>
                         </div>
                         </a>

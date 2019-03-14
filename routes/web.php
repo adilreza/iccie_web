@@ -46,6 +46,8 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::get('/home/add_scope','admin_controller@add_scope');
     Route::post('/home/add_scope','admin_controller@add_scope_req');
     Route::get('/home/delete_scope/{scope_id}','admin_controller@delet_scope');
+    Route::get('/home/add_committee','admin_controller@add_committee');
+    Route::post('/home/add_committee','admin_controller@add_committee_req');
     
     
 });
@@ -56,3 +58,4 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
 
 Route::get('/','iccie_maincontroller@index');
 Route::get('/iccie_scope','iccie_maincontroller@iccie_scope');
+Route::get('/committee_member','iccie_maincontroller@committee_member');

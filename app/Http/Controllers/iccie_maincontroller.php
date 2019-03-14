@@ -23,6 +23,13 @@ class iccie_maincontroller extends Controller
         $all_scope = DB::table('scope_lists')->get();
         return view('iccie_scope')->with('all_scope',$all_scope);
     }
+    public function committee_member()
+    {
+        $chief_member = DB::table('committee_members')->where('member_category','CHIEF PATRON')->get();
+        $technical_member = DB::table('committee_members')->where('member_category','TECHNICAL PATRON')->get();
+        $international_member = DB::table('committee_members')->where('member_category','INTERNATIONAL ADVISORY COMMITTEE')->orderBy('id','DESC')->get();
+        return view('committee_member')->with(['chief_member'=>$chief_member, 'technical_member'=>$technical_member,'international_member'=>$international_member]);
+    }
 
 
 

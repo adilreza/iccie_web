@@ -178,6 +178,28 @@ class admin_controller extends Controller
         return back();
     }
 
+    public function add_committee()
+    {
+        return view('admin.admin_panel.add_committee');
+    }
+
+    public function add_committee_req(request $data)
+    {
+        $member_name =$data->member_name;
+        $member_university =$data->member_university;
+        $member_department =$data->member_department;
+        $member_category =$data->member_category;
+        $image_name = "";
+        if($data->hasfile('member_image'))
+        {
+            $image_name = $data->file('member_image')->getClientOriginalName();
+            $data->file('member_image')->move(public_path().'/iccie_all_web_file/iccie_image_gallery/member_image',$image_name);
+        }
+        $make_array = array('member_name'=>$member_name,'member_university'=>$member_university,'member_department'=>$member_department,'member_category'=>$member_category,'member_image'=>$image_name);
+        DB::table('committee_members')->insert($make_array);
+        return back();
+    }
+
 
 
 
