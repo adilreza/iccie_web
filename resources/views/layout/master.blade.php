@@ -61,9 +61,9 @@
 	  <div id="menubar">
         <ul id="nav">
           <!--<li id="tabs01" onclick="showStuff(this)"><a href="..\index.html" style="text-decoration: none; color: white;">Home</a></li>-->
-          <li id="tabs01" onclick="showStuff(this)">Home</li>
+        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/')}}">Home</a></li>
 		  <li id="tabs02" onclick="showStuff(this)">Committee</li>
-		  <li id="tabs03" onclick="showStuff(this)">Scope</li>
+      <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
           <li id="tabs04" onclick="showStuff(this)">Call for Paper</li>
           <li id="tabs05" onclick="showStuff(this)"> Camera Ready Submission</li>
           <li id="tabs05" onclick="showStuff(this)">Registration</li>
@@ -76,17 +76,18 @@
 
     <div id="site_content" style="height:760px;">	
         
-        <div class="container" style="height:100%;">
+        <div class="container" style="height:100%;width:100%;">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
 
 
                     @yield('home_page')
+                    @yield('scope_page')
 
 
 
                 </div>
-                <div class="col-md-4" style="">
+                <div class="col-md-3" style="">
                         <div class="sidebar_container">              
                         
                                 <div class="sidebar">   
@@ -111,6 +112,27 @@
                                     </div><!--close sidebar_item--> 
                                  </div><!--close sidebar-->
                         </div>
+                        <div class="sidebar_container">
+                            
+                          {{-- <div class="sidebar">
+                                <div class="sidebar_item">       
+                                  <h2>Importants Dates</h2>
+                                </div>
+                            </div> --}}
+                            
+                            <div class="sidebar">
+                                <div class="sidebar_item">
+                                 <h2 >Important Dates</h2>
+                                 <hr>
+                                 
+                                
+                                </div>
+                             </div>
+
+                         
+                        </div>
+                        
+
                 </div>
 
             </div>
@@ -121,9 +143,19 @@
 
     </div>
 
-<footer > 
+<footer style=""> 
 	  Copyright &#169 ICCIE . All rights reserved.Powered by Computer Science & Engineering, RUET.
 </footer>
+
+
+<script>
+  document.documentElement.scrollTop = document.body.scrollTop = 450;
+</script>
+
+
+
+
+
 
   <!-- javascript at the bottom for fast page loading -->
   <script type="text/javascript" src="{{URL::asset('iccie_all_web_file/js/jquery.min.js')}}"></script>

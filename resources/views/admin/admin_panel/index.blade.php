@@ -22,18 +22,18 @@
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-4 col-xlg-3">
-                        <a href="{{URL::to('/admin/admin_presentation_upload')}}">
+                        <a href="{{URL::to('/admin/home/add_scope')}}">
                             <div class="card card-hover">
                                 <div class="box bg-success text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                                    <h6 class="text-white">Upload Presentation</h6>
+                                    <h6 class="text-white">Add Scope</h6>
                                 </div>
                             </div>
                         </a>
                     </div>
                      <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="{{URL::to('/admin/give_sample_report')}}">
+                        <a href="{{URL::to('#')}}">
                             <div class="card card-hover">
                                 <div class="box bg-warning text-center">
                                     <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
@@ -44,7 +44,7 @@
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="{{URL::to('/admin/rfq_from_client')}}">
+                        <a href="{{URL::to('#')}}">
                                 <div class="card card-hover">
                                     <div class="box bg-danger text-center">
                                         <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>

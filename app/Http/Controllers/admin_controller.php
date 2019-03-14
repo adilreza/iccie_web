@@ -84,20 +84,8 @@ class admin_controller extends Controller
         session(['admin_login_status'=>'']);
         return redirect('/fsm_admin/private/login');
     }
-    public function admin_report()
-    {
-        return view('admin.admin_report');
-    }
-    public function admin_report_request(Request $data)
-    {
-        $name = $data->name;
-        $email = $data->email;
-        $message = $data->report_message;
-
-        $make_array= array('admin_reporter_name'=>$name,'adnin_reporter_email'=>$email,'admin_reporter_message'=>$message);
-        DB::table('admin_problem_reports')->insert($make_array);
-        echo "success";
-    }
+   
+ 
 
     public function home()
     {
@@ -156,11 +144,51 @@ class admin_controller extends Controller
 
     }
 
-    public function article_send_to_client()
+    public function add_scope()
     {
-        $all_article =DB::table('article_tables')->orderBy('id', 'DESC')->get();
-        return view('admin.admin_panel.article_send_to_client')->with('all_articles',$all_article);
+        $all_scope = DB::table('scope_lists')->orderBy('id','DESC')->get();
+
+        return view('admin.admin_panel.add_scope')->with(['all_scope'=>$all_scope]);
     }
+
+    public function add_scope_req(request $data)
+    {
+        
+        $scope_name = $data->scope_name;
+        $cont = DB::table('scope_lists')->where('scope_name',$scope_name)->count();
+        if($cont>0)
+        {
+            $msg = "Scope Item Already Exist";
+        }
+        else
+        {
+
+        $make_array = array('scope_name'=>$scope_name);
+
+        DB::table('scope_lists')->insert($make_array);
+        $msg = "New Scope Item added";
+        }
+        $all_scope = DB::table('scope_lists')->orderBy('id','DESC')->get();
+        return view('admin.admin_panel.add_scope')->with(['msg'=>$msg,'all_scope'=>$all_scope]);
+    }
+
+    public function delet_scope($scope_id)
+    {
+        DB::table('scope_lists')->where('id', $scope_id)->delete();
+        return back();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -286,21 +314,7 @@ class admin_controller extends Controller
         return view('admin.admin_panel.rfq_replay_admin')->with('user_name',$user_name);
 
     }
-    public function rfq_replay_admin_client(Request $data)
-    {
-        $rfq_from ="admin";
-        $rfq_to = $data->to_sample;
-        $rfq_file_name = "";
-        $optoional = "No comment";
-        if($data->hasfile('rfq_report_file'))
-        {
-            $rfq_file_name = $data->file('rfq_report_file')->getClientOriginalName();
-            $data->file('rfq_report_file')->move(public_path().'/fsm_all_web_file/rfq_file',$rfq_file_name);
-            $make_array = array(['optional_comment'=>$optoional,'rfq_from'=>$rfq_from,'rfq_to'=>$rfq_to,'rfq_file_name'=>$rfq_file_name]);
-            DB::table('rfq_tables')->insert($make_array);
-        }
-        return view('admin.admin_panel.rfq_replay_admin')->with('success_message','Ok done you message sent');
-    }
+    
 
 
 
