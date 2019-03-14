@@ -44,11 +44,11 @@
                         </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
-                        <a href="{{URL::to('#')}}">
+                        <a href="{{URL::to('/admin/call_for_paper_get')}}">
                                 <div class="card card-hover">
                                     <div class="box bg-danger text-center">
                                         <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                                        <h6 class="text-white">RFQ From Clients</h6>
+                                        <h6 class="text-white">Add call for paper</h6>
                                     </div>
                                 </div>
                         </a>

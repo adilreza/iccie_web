@@ -180,7 +180,9 @@ class admin_controller extends Controller
 
     public function add_committee()
     {
-        return view('admin.admin_panel.add_committee');
+        $all_member = DB::table('committee_members')->get();
+
+        return view('admin.admin_panel.add_committee')->with('all_member',$all_member);
     }
 
     public function add_committee_req(request $data)
@@ -197,10 +199,46 @@ class admin_controller extends Controller
         }
         $make_array = array('member_name'=>$member_name,'member_university'=>$member_university,'member_department'=>$member_department,'member_category'=>$member_category,'member_image'=>$image_name);
         DB::table('committee_members')->insert($make_array);
+        $all_member = DB::table('committee_members')->get();
+
+        return view('admin.admin_panel.add_committee')->with('all_member',$all_member);
+    }
+
+    public function delete_commitee_member($delete_id)
+    {
+        DB::table('committee_members')->where('id',$delete_id)->delete();
+        $all_member = DB::table('committee_members')->get();
         return back();
     }
 
+    public function call_for_paper_get()
+    {
+        $call_for_paper = DB::table('call_for_papers')->orderBy('id','DESC')->get();
+        return view('admin.admin_panel.call_for_paper_admin')->with('call_for_paper',$call_for_paper);
 
+    }
+    public function call_for_paper_post(request $data)
+    {
+        $paper_name = "";
+
+        
+        if($data->hasfile('paper_name'))
+        {
+            $paper_name = $data->file('paper_name')->getClientOriginalName();
+            $data->file('paper_name')->move(public_path().'/iccie_all_web_file/call_for_paper',$paper_name);
+
+        }
+        $make_array=array('paper_name'=>$paper_name);
+        DB::table('call_for_papers')->insert($make_array);
+        return back();
+
+    }
+    public function delete_call_for_paper($delete_id)
+    {
+        DB::table('call_for_papers')->where('id',$delete_id)->delete();
+        return back();
+
+    }
 
 
 

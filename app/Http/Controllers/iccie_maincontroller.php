@@ -31,6 +31,17 @@ class iccie_maincontroller extends Controller
         return view('committee_member')->with(['chief_member'=>$chief_member, 'technical_member'=>$technical_member,'international_member'=>$international_member]);
     }
 
+    
+
+    public function call_for_paper()
+    {
+        $call_for_paper = DB::table('call_for_papers')->orderBy('id','DESC')->get();
+
+        return view('call_for_paper')->with('call_for_paper',$call_for_paper);
+
+
+    }
+
 
 
 

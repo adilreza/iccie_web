@@ -48,7 +48,10 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::get('/home/delete_scope/{scope_id}','admin_controller@delet_scope');
     Route::get('/home/add_committee','admin_controller@add_committee');
     Route::post('/home/add_committee','admin_controller@add_committee_req');
-    
+    Route::get('/delete_commitee_member/{delete_id}','admin_controller@delete_commitee_member');
+    Route::post('/call_for_paper_post','admin_controller@call_for_paper_post');
+    Route::get('/call_for_paper_get','admin_controller@call_for_paper_get');
+    Route::get('/delete_call_for_paper/{delete_id}','admin_controller@delete_call_for_paper');
     
 });
 
@@ -59,3 +62,4 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
 Route::get('/','iccie_maincontroller@index');
 Route::get('/iccie_scope','iccie_maincontroller@iccie_scope');
 Route::get('/committee_member','iccie_maincontroller@committee_member');
+Route::get('/call_for_paper','iccie_maincontroller@call_for_paper');

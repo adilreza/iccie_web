@@ -58,16 +58,27 @@
                                             <thead>
                                                 <tr>
                                                     <th>serial</th>
-                                                    <th>Scope Name</th>
-                                                    <th>Adding Date</th>
+                                                    <th>Image</th>
+                                                    <th>Member Name</th>
                                                    
-                                                    <th>Remove Scope</th>
+                                                    <th>Varsity</th>
+                                                    <th>Remove</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <p style="display:none;">{{$i=1}}</p>
+                                            @foreach ($all_member as $member)
+                                                <tr>
+                                                    <td>{{$i++}}</td>
+                                                <td><img style="height:40px; width:40px;" src="{{URL::asset('/iccie_all_web_file/iccie_image_gallery/member_image/'.$member->member_image)}}"/></td>
+                                                    <td>{{$member->member_name}}</td>
+                                                    <td><p style="font-size:10px;">{{$member->member_university}}</p></td>
+                                                    <td><a href="{{URL::to('/admin/delete_commitee_member/'.$member->id)}}" style="color:red;">Remove</a></td>
+                                                   
+                                                </tr>
         
-                                           
+                                            @endforeach
+
                                             </tbody>
                                         </table>
                                     </div>

@@ -63,8 +63,8 @@
           <!--<li id="tabs01" onclick="showStuff(this)"><a href="..\index.html" style="text-decoration: none; color: white;">Home</a></li>-->
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/')}}">Home</a></li>
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/committee_member')}}">Committee</a></li>
-      <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
-          <li id="tabs04" onclick="showStuff(this)">Call for Paper</li>
+        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
+        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/call_for_paper')}}">Call For Paper</a></li>
           <li id="tabs05" onclick="showStuff(this)"> Camera Ready Submission</li>
           <li id="tabs05" onclick="showStuff(this)">Registration</li>
         
@@ -144,7 +144,32 @@
     </div>
 
 <footer style=""> 
-	  Copyright &#169 ICCIE . All rights reserved.Powered by Computer Science & Engineering, RUET.
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <h3 >Co Organizer</h3>
+              <hr style="width:90%;">
+              
+            <img src ="{{URL::asset('iccie_all_web_file/images/co_org.jpg')}}"  style="height:65px;" alt="CO Organization"/>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-5 text-center">
+                <h3 > Sponsored By</h3>
+                <hr style="width:90%;">
+               
+              <img src ="{{URL::asset('iccie_all_web_file/images/CISCOLAC2.png')}}" style="height:65px;" alt="CO Organization"/>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+      <hr>
+      <p class="text-center"> Copyright &#169 ICCIE . All rights reserved.Powered by Computer Science & Engineering, RUET.</p>
+  </div>
 </footer>
 
 

@@ -83,13 +83,10 @@
         
 </div>
 <br>
-<br>
-<br>
-<br>
 
 
 <script>
-        document.documentElement.scrollTop = document.body.scrollTop = 450;
+    document.documentElement.scrollTop = document.body.scrollTop = 450;
 </script>
       
 
