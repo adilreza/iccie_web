@@ -49,7 +49,7 @@
             <div class="col-md-6">
                 <div class="card" style="height:600px;overflow:scroll;">
                         <div class="card-body wizard-content">
-                                <h4 class="card-title text-center">All Scope Name(sorted by last updata) </h4>
+                                <h4 class="card-title text-center">All Member Name(sorted by last updata) </h4>
                                 <br>
                                 <h6 class="card-subtitle"></h6>
         

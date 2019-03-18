@@ -258,6 +258,42 @@ class admin_controller extends Controller
         DB::table('important_dates')->where('id',$delete_id)->delete();
         return back();
     }
+    public function add_banner()
+    {
+        return view('admin.admin_panel.add_banner');
+    }
+    public function add_banner_title(request $data)
+    {
+        $banner_name = "";
+        $type ="title";
+        if($data->hasfile('title_banner'))
+        {
+            $banner_name = $data->file('title_banner')->getClientOriginalName();
+            $data->file('title_banner')->move(public_path().'/banner_all',$banner_name);
+            $make_arr = array('type'=>$type, 'banner_name'=>$banner_name);
+            DB::table('banner_alls')->insert($make_arr);
+            return view('admin.admin_panel.add_banner')->with('success1','ok inserted');
+        }
+        
+        return view('admin.admin_panel.add_banner')->with('failed1','file not uploaded');
+        
+    }
+
+    public function add_banner_home(request $data)
+    {
+        $banner_name = "";
+        $type ="home";
+        if($data->hasfile('home_banner'))
+        {
+            $banner_name = $data->file('home_banner')->getClientOriginalName();
+            $data->file('home_banner')->move(public_path().'/banner_all',$banner_name);
+            $make_arr = array('type'=>$type, 'banner_name'=>$banner_name);
+            DB::table('banner_alls')->insert($make_arr);
+            return view('admin.admin_panel.add_banner')->with('success2','ok inserted');
+        }
+        
+        return view('admin.admin_panel.add_banner')->with('failed2','file not uploaded');
+    }
 
 
 

@@ -55,6 +55,9 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::get('/add_important_date','admin_controller@add_important_date');
     Route::post('/add_important_date','admin_controller@add_important_date_post');
     Route::get('/home/delete_date/{delete_id}','admin_controller@delete_date');
+    Route::get('/add_banner','admin_controller@add_banner');
+    Route::post('/add_banner_title','admin_controller@add_banner_title');
+    Route::post('/add_banner_home','admin_controller@add_banner_home');
     
 });
 

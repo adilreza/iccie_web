@@ -67,11 +67,11 @@
                     <!-- Column -->
                     <!-- Column -->
                     <div class="col-md-6 col-lg-4 col-xlg-3">
-                        <a href="{{URL::to('/admin/article_send_to_client')}}">
+                        <a href="{{URL::to('/admin/add_banner')}}">
                             <div class="card card-hover">
                                 <div class="box bg-danger text-center">
-                                    <h1 class="font-light text-white"><i class=" far fa-paper-plane"></i></h1>
-                                    <h6 class="text-white">Blast article to multiple mail</h6>
+                                    <h1 class="font-light text-white"><i class="fas fa-align-justify"></i></h1>
+                                    <h6 class="text-white">Add Tittle Banner and Home Banner</h6>
                                 </div>
                             </div>
                         </a>

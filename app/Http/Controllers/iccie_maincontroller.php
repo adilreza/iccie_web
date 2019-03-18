@@ -11,7 +11,13 @@ class iccie_maincontroller extends Controller
     {
         $home_article =DB::table('home_page_articles')->orderBy('id', 'DESC')->first();
         $all_date = DB::table('important_dates')->get();
-        return view('index')->with(['home_article'=>$home_article,'all_date'=>$all_date]);
+        $home_banner = DB::table('banner_alls')->where('type','home')->orderBy('id','DESC')->first();
+        $title_banner = DB::table('banner_alls')->where('type','title')->orderBy('id','DESC')->first();
+        session(['banner_home'=>$home_banner->banner_name, 'banner_title'=>$title_banner->banner_name, 'all_dates'=>$all_date]);
+
+
+
+        return view('index')->with(['home_article'=>$home_article]);
     }
 
     public function master()

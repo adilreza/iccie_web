@@ -24,9 +24,9 @@
 		
 @endsection
 
-@section('important_date')
+{{-- @section('important_date')
     @foreach ($all_date as $date)
         <p style="font-size:13px;margin-bottom:-1px;"> <b>{{$date->date_title}}</b></p>
         <p style="margin-top:1px;font-size:12px" class="date"> {{$date->date}}</p>
     @endforeach
-@endsection
+@endsection --}}

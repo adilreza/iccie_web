@@ -29,25 +29,15 @@
     <header>
 	  <div id="banner">
 	    <div id="welcome">
-	      <div id="wtext"><img width="940" height="100" src="{{URL::asset('iccie_all_web_file/images/header2.png')}}" alt="&quot;Enter your caption here&quot;" /></div>
+	      <div id="wtext"><img width="940" height="100" src="{{URL::asset('banner_all/'.session('banner_title'))}}" alt="banner Title" /></div>
 	    </div><!--close welcome-->
 	    <div id="welcome_slogan">
 	      <div id="wslogan"></div>
 	    </div><!--close welcome_slogan-->				  
         <div class="slideshow">
-	      <ul class="slideshow">
-            <li class="show"><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_1.png')}}" alt="ICCIE 2015"/></li>
-			<li ><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_2.jpg')}}" alt="Somapura Mahavihara: Archeological Site in Bangladesh" /></li>
-                         <li><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_4.png')}}" alt="ICCIE 2015"  /></li>
-                         <li ><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_3.jpg')}}" alt="Cox's Bazar: Continuous 120 Kilometres Sandy Sea Beach in Bangladesh" /></li>
-	        
-			<li><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_1.png')}}" alt="ICCIE 2015"  /></li> 
-                        <li ><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_5.jpg')}}" alt="Sundarbans: Largest Tidal Halophytic Mangrove Forest in The World" /></li>
-			<li><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_4.png')}}" alt="ICCIE 2015"  /></li> 
-                        <li ><img width="940" height="300" src="{{URL::asset('iccie_all_web_file/images/home_6.jpg')}}" alt=" National Martyrs' Memorial: The National Monument of Bangladesh" /></li>
-           
             
-		  </ul> 
+                <img width="940" height="300" src="{{URL::asset('banner_all/'.session('banner_home'))}}" alt="ICCIE 2015"  />		
+  
 	    </div><!--close slideshow-->
 	    </br>
 	      <p><marquee behavior="scroll" direction="left" scrolldelay="85" onmouseover="this.stop();" onmouseout="this.start();">
@@ -125,7 +115,14 @@
                                  <h2 >Important Dates</h2>
                                  <hr>
 
-                                 @yield('important_date')
+                                 @if(!empty(session('all_dates')))
+                                <p style="display:none;">{{$all_date=session('all_dates')}}</p>
+                                    @foreach ($all_date as $date)
+                                        <p style="font-size:13px;margin-bottom:-1px;"> <b>{{$date->date_title}}</b></p>
+                                        <p style="margin-top:1px;font-size:12px" class="date"> {{$date->date}}</p>
+                                    @endforeach
+                                  @endif
+                            
                                  
                                 
                                 </div>
