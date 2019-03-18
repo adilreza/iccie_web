@@ -41,9 +41,9 @@
 	    </div><!--close slideshow-->
 	    </br>
 	      <p><marquee behavior="scroll" direction="left" scrolldelay="85" onmouseover="this.stop();" onmouseout="this.start();">
-                &nbsp&nbsp&nbsp&nbsp ACCEPTED PAPER LIST (<a href="docs/Accepted_Papers.pdf">Download</a>). 
-	        &nbsp&nbsp&nbsp&nbsp VALID REGISTRATION LIST (<a href="docs/valid_reg.pdf">Download</a>).
-                &nbsp&nbsp&nbsp&nbsp PROGRAM SCHEDULE (<a href="docs/program.pdf">Download</a>).   
+                &nbsp&nbsp&nbsp&nbsp ACCEPTED PAPER LIST (<a href="{{URL::asset('iccie_all_web_file/docs/Accepted_Papers.pdf')}}">Download</a>). 
+	        &nbsp&nbsp&nbsp&nbsp VALID REGISTRATION LIST (<a href="{{URL::asset('iccie_all_web_file/docs/valid_reg.pdf')}}">Download</a>).
+                &nbsp&nbsp&nbsp&nbsp PROGRAM SCHEDULE (<a href="{{URL::asset('iccie_all_web_file/docs/program.pdf')}}">Download</a>).   
                 </marquee>	</p> 
 	  </div><!--close banner-->	
 	</header>
