@@ -239,6 +239,25 @@ class admin_controller extends Controller
         return back();
 
     }
+    public function add_important_date()
+    {
+        $all_date = DB::table('important_dates')->get();
+        return view('admin.admin_panel.add_important_date')->with('all_date',$all_date);
+    }
+    public function add_important_date_post(request $data)
+    {
+        $date_title = $data->date_title;
+        $date = $data->date;
+        $make = array('date_title'=>$date_title,'date'=>$date);
+        DB::table('important_dates')->insert($make);
+        $all_date = DB::table('important_dates')->get();
+        return view('admin.admin_panel.add_important_date')->with(['msg'=>'success','all_date'=>$all_date]);
+    }
+    public function delete_date($delete_id)
+    {
+        DB::table('important_dates')->where('id',$delete_id)->delete();
+        return back();
+    }
 
 
 

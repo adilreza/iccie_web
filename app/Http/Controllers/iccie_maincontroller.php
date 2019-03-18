@@ -9,8 +9,9 @@ class iccie_maincontroller extends Controller
 {
     public function index()
     {
-        $home_article =DB::table('home_page_articles')->orderBy('id', 'DESC')->get();
-        return view('index')->with('home_article',$home_article);
+        $home_article =DB::table('home_page_articles')->orderBy('id', 'DESC')->first();
+        $all_date = DB::table('important_dates')->get();
+        return view('index')->with(['home_article'=>$home_article,'all_date'=>$all_date]);
     }
 
     public function master()

@@ -55,12 +55,14 @@
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
+                            <a href="{{URL::to('/admin/add_important_date')}}">
                         <div class="card card-hover">
                             <div class="box bg-info text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
-                                <h6 class="text-white">Full Width</h6>
+                                <h1 class="font-light text-white"><i class="far fa-calendar-alt"></i></h1>
+                                <h6 class="text-white">Add Dates</h6>
                             </div>
                         </div>
+                            </a>
                     </div>
                     <!-- Column -->
                     <!-- Column -->

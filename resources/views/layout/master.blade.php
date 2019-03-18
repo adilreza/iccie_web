@@ -124,6 +124,8 @@
                                 <div class="sidebar_item">
                                  <h2 >Important Dates</h2>
                                  <hr>
+
+                                 @yield('important_date')
                                  
                                 
                                 </div>

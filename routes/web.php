@@ -52,6 +52,9 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::post('/call_for_paper_post','admin_controller@call_for_paper_post');
     Route::get('/call_for_paper_get','admin_controller@call_for_paper_get');
     Route::get('/delete_call_for_paper/{delete_id}','admin_controller@delete_call_for_paper');
+    Route::get('/add_important_date','admin_controller@add_important_date');
+    Route::post('/add_important_date','admin_controller@add_important_date_post');
+    Route::get('/home/delete_date/{delete_id}','admin_controller@delete_date');
     
 });
 
