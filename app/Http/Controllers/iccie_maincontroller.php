@@ -49,6 +49,10 @@ class iccie_maincontroller extends Controller
 
     }
 
+    public function camera_submission(){
+        return view('camera_submission');
+    }
+
 
 
 

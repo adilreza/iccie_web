@@ -62,10 +62,11 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
 });
 
 
-
+//USER SECTION 
 
 
 Route::get('/','iccie_maincontroller@index');
 Route::get('/iccie_scope','iccie_maincontroller@iccie_scope');
 Route::get('/committee_member','iccie_maincontroller@committee_member');
 Route::get('/call_for_paper','iccie_maincontroller@call_for_paper');
+Route::get('/camera_submission','iccie_maincontroller@camera_submission');

@@ -55,7 +55,8 @@
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/committee_member')}}">Committee</a></li>
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
         <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/call_for_paper')}}">Call For Paper</a></li>
-          <li id="tabs05" onclick="showStuff(this)"> Camera Ready Submission</li>
+        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/camera_submission')}}">Camera Ready Submission</a></li>
+         
           <li id="tabs05" onclick="showStuff(this)">Registration</li>
         
           <!--li class="new" id="tabs07" onclick="showStuff(this)">  Update </li> -->

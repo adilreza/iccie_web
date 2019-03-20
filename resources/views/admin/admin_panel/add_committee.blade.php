@@ -32,6 +32,7 @@
                                         <option value="CHIEF PATRON">CHIEF PATRON</option>
                                         <option value="TECHNICAL PATRON">TECHNICAL PATRON</option>
                                         <option value="INTERNATIONAL ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
+                                        <option value="ORGANIZING COMMITTEE">OGANIZING COMMITTEE</option>
                                     </select>
                                     <br>
                                     <label>Member Image</label>
