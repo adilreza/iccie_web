@@ -1,3 +1,20 @@
+@media screen and (max-width: 1366px) {
+  #primary { width:95%; }
+}
+
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 648px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+
+
 @font-face { 
   font-family: News Cycle; 
     src: url('../fonts/NewsCycle-Regular.eot'); 
@@ -6,10 +23,10 @@
 
 html
 { height: 100%;}
-
 *
 { margin: 0;
-  padding: 0;}
+  padding: 0;
+}
 
 body
 { font: normal 80% Arial, Helvetica, sans-serif;
@@ -63,11 +80,9 @@ span
 a, a:hover
 { color: #000;
   background: transparent;
-  outline: none;
-  text-decoration: underline;}
+  outline: none;}
 
-a:hover
-{ text-decoration: none;}
+
 
 ul
 { margin: 2px 0 22px 30px;
@@ -136,22 +151,35 @@ header
    height: 50px; 
 }  
   
-#nav li.new 
-{
-  /*background: #FF0000 ;*/
-}
 
 
 #menubar
 { width: 940px;
   height: 50px;
-  text-align: center; 
+  display: grid;
+  grid-gap: .5px;
+  box-sizing: border-box;
   margin-top: -25px;
   background: #0043A8;
   background: -moz-linear-gradient(#43A9FF, #0043A8);
   background: -o-linear-gradient(#43A9FF, #0043A8);
   background: -webkit-linear-gradient(#43A9FF, #0043A8);
-  border: 1px solid #0043A8;} 
+  border: 1px solid #0043A8;
+} 
+.menubar_dash a{
+  height: 50px;
+  width:120px;
+  float:left;
+  text-align: center; 
+  background: #0043A8;
+  background: -moz-linear-gradient(#43A9FF, #0043A8);
+  background: -o-linear-gradient(#43A9FF, #0043A8);
+  background: -webkit-linear-gradient(#43A9FF, #0043A8);
+}
+.menubar_dash:hover{
+  background: #0043A8;
+  -webkit-transition: background-color 1s ease-in-out; 
+}
   
 #welcome
 { width: 940px;
@@ -219,7 +247,8 @@ ul#nav li.current
   
 ul#nav li:hover
 { color: #000;
-  text-shadow: none;}
+  text-shadow: none;
+}
 
 #site_content
 { width: 940px;
@@ -255,15 +284,16 @@ ul#nav li:hover
 
  
  
-.sidebar h3
+.sidebar h3 
 {  font: bold 18px "Times New Roman", Times, serif;
    /*font: bold 120% Arial, Helvetica, sans-serif;*/
    color: #006699;}  
 
-.sidebar_item h3:hover
-{ color: #000;
+.sidebar_item h3 a:hover
+{ color: #0043A8;
   text-shadow: 1px 1px #FFF;
   cursor:grab;
+  text-decoration: none;
 }
 
 .sidebar_item .new
@@ -576,4 +606,11 @@ ul img {
  
  .tabContent {
     display:none;
+}
+.navigation_tabs{
+  color:white;
+  text-decoration:none;
+}
+.navigation_tabs:hover{
+  color: #000;
 }

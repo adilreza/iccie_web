@@ -121,6 +121,8 @@ class admin_controller extends Controller
         return view('admin.admin_panel.library_text_editor');
     }
 
+
+    
   
 
     public function home_page_article_post(request $data)
@@ -228,6 +230,12 @@ class admin_controller extends Controller
             $data->file('paper_name')->move(public_path().'/iccie_all_web_file/call_for_paper',$paper_name);
 
         }
+        /*      
+        $make_array = array('column name'=> value)
+        DB::table('TABLE NAME')->insert($make_array)
+        return back();
+        */
+        
         $make_array=array('paper_name'=>$paper_name);
         DB::table('call_for_papers')->insert($make_array);
         return back();

@@ -23,16 +23,34 @@
                                     <label for="member_university">Member University</label>
                                     <input id="member_university" name="member_university" placeholder="Hirosima University, japan" type="text" required class=" form-control">
                                     <br>
-                                    <label for="member_department">Member Department</label>
-                                    <input id="member_department" name="member_department" placeholder="Faculty of Computer Science & Information Technology " type="text" required class=" form-control">
+                                    <label for="member_department">Country</label>
+                                    <input id="member_department" name="member_department" placeholder="Bangladesh" type="text" required class=" form-control">
                                     <br>
                                     <label for="mc">Member Category</label>
                                     <select class="form-control" required name="member_category" id="mc">
                                         <option value=""></option>
                                         <option value="CHIEF PATRON">CHIEF PATRON</option>
                                         <option value="TECHNICAL PATRON">TECHNICAL PATRON</option>
-                                        <option value="INTERNATIONAL ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
-                                        <option value="ORGANIZING COMMITTEE">OGANIZING COMMITTEE</option>
+                                        <option value="ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
+                                        <option value="ORGANIZING COMMITTEE">ORGANIZING COMMITTEE</option>
+                                    </select>
+                                    <br>
+                                    <label for="Sub_committee">Organizing Sub-Committee (Optional)</label>
+                                    <select class="form-control" required name="member_category" id="committee_post">
+                                        <option value="">None</option>
+                                        <option value="Web_Media">Web & Media Sub-Committee</option>
+                                        <option value="publication">Publication Sub-Committee</option>
+                                        <option value="registration">Registration Sub-Committee</option>
+                                        <option value="finance">Finance Sub-Committee</option>
+                                    </select>
+                                    <br>
+                                    <label>Member Post</label>
+                                    <select class="form-control" required name="member_category" id="committee_post">
+                                        <option value=""></option>
+                                        <option value="Chair">Chair</option>
+                                        <option value="Co_chair">Co-chair</option>
+                                        <option value="Secretary">Secretary</option>
+                                        <option value="Members">Member</option>
                                     </select>
                                     <br>
                                     <label>Member Image</label>
@@ -61,8 +79,7 @@
                                                     <th>serial</th>
                                                     <th>Image</th>
                                                     <th>Member Name</th>
-                                                   
-                                                    <th>Varsity</th>
+                                                    <th>University</th>
                                                     <th>Remove</th>
                                                 </tr>
                                             </thead>

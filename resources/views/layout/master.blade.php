@@ -15,6 +15,16 @@
 <meta name="keywords" content="ICCIE,Computer, Science, CSE, RUET, Conference, International, Rajshahi,University" />
 <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="{{URL::asset('iccie_all_web_file/css/style.css')}}" />
+
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+
+
 <!-- modernizr enables HTML5 elements and feature detects -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -40,9 +50,10 @@
   
 	    </div><!--close slideshow-->
 	    </br>
+      <!-- ################## MARQUE TAG SECTION################### -->
 	      <p><marquee behavior="scroll" direction="left" scrolldelay="85" onmouseover="this.stop();" onmouseout="this.start();">
                 &nbsp&nbsp&nbsp&nbsp ACCEPTED PAPER LIST (<a href="{{URL::asset('iccie_all_web_file/docs/Accepted_Papers.pdf')}}">Download</a>). 
-	        &nbsp&nbsp&nbsp&nbsp VALID REGISTRATION LIST (<a href="{{URL::asset('iccie_all_web_file/docs/valid_reg.pdf')}}">Download</a>).
+	              &nbsp&nbsp&nbsp&nbsp VALID REGISTRATION LIST (<a href="{{URL::asset('iccie_all_web_file/docs/valid_reg.pdf')}}">Download</a>).
                 &nbsp&nbsp&nbsp&nbsp PROGRAM SCHEDULE (<a href="{{URL::asset('iccie_all_web_file/docs/program.pdf')}}">Download</a>).   
                 </marquee>	</p> 
 	  </div><!--close banner-->	
@@ -51,13 +62,13 @@
 	  <div id="menubar">
         <ul id="nav">
           <!--<li id="tabs01" onclick="showStuff(this)"><a href="..\index.html" style="text-decoration: none; color: white;">Home</a></li>-->
-        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/')}}">Home</a></li>
-        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/committee_member')}}">Committee</a></li>
-        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
-        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/call_for_paper')}}">Call For Paper</a></li>
-        <li ><a style="color:white;text-decoration:none;" href="{{URL::to('/camera_submission')}}">Camera Ready Submission</a></li>
-         
-          <li id="tabs05" onclick="showStuff(this)">Registration</li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/')}}">Home</a></li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/committee_member')}}">Committee</a></li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/iccie_scope')}}">Scope</a></li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/speakers')}}">Speakers</a></li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/call_for_paper')}}">Call For Paper</a></li>
+        <li ><a style="color:white;text-decoration:none;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'" href="{{URL::to('/camera_submission')}}">Camera Ready Submission</a></li>
+        <li id="tabs05" onclick="showStuff(this)">Registration</li>
         
           <!--li class="new" id="tabs07" onclick="showStuff(this)">  Update </li> -->
         </ul>
@@ -93,7 +104,7 @@
                                     <div class="sidebar_item">
                                      <h2 >Information Desk</h2>
                                      <hr>
-                                     <h3 id="tabs08" onclick="showStuff(this)">Proceedings & Publication</h3>
+                                     <h3><a href="{{URL::to('/camera_submission')}}">Proceedings & Publication</a></h3>
                                      <h3 id="tabs09" onclick="showStuff(this)">Accepted Paper List</h3>
                                      <h3 id="tabs10" onclick="showStuff(this)">Post Conference Tour</h3>
                                      <h3 id="tabs11" onclick="showStuff(this)">Accomodation</h3>

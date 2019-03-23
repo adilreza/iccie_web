@@ -58,7 +58,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::get('/add_banner','admin_controller@add_banner');
     Route::post('/add_banner_title','admin_controller@add_banner_title');
     Route::post('/add_banner_home','admin_controller@add_banner_home');
-    
+
 });
 
 
@@ -70,3 +70,4 @@ Route::get('/iccie_scope','iccie_maincontroller@iccie_scope');
 Route::get('/committee_member','iccie_maincontroller@committee_member');
 Route::get('/call_for_paper','iccie_maincontroller@call_for_paper');
 Route::get('/camera_submission','iccie_maincontroller@camera_submission');
+Route::get('/speakers','iccie_maincontroller@speakers');

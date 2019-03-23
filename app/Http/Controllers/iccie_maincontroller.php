@@ -53,6 +53,10 @@ class iccie_maincontroller extends Controller
         return view('camera_submission');
     }
 
+    public function speakers(){
+        return view('speakers');
+    }
+
 
 
 
