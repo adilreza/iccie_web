@@ -7,6 +7,11 @@
 <title>@yield('page_title')</title>
 
 <link rel="shortcut icon" href="{{URL::asset('iccie_all_web_file/images/ICCIE_training_badge-min.png')}}" type="image/x-icon">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
 <meta content='biprodip pal' name='author'/>
 <meta content='rizoan toufiq' name='author'/>
@@ -27,7 +32,7 @@
 
 <!-- modernizr enables HTML5 elements and feature detects -->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
 <script type="text/javascript" src="{{URL::asset('iccie_all_web_file/js/modernizr-1.5.min.js')}}"></script>
 

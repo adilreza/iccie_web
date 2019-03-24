@@ -11,7 +11,7 @@
                     <div class="card-body wizard-content">
                         
                         <h6 class="card-subtitle"></h6>
-                    <form id="example-form" action="{{URL::to('/admin/home/add_committee')}}" method="post" class="m-t-40" enctype="multipart/form-data">
+                    <form id="example-form" action="{{URL::to('/admin/home/add_committee_final')}}" method="post" class="m-t-40" enctype="multipart/form-data">
                          {{ csrf_field() }}
                             <div>
                                 <h3>Add Committee Members</h3>
@@ -23,38 +23,42 @@
                                     <label for="member_university">Member University</label>
                                     <input id="member_university" name="member_university" placeholder="Hirosima University, japan" type="text" required class=" form-control">
                                     <br>
-                                    <label for="member_department">Country</label>
-                                    <input id="member_department" name="member_department" placeholder="Bangladesh" type="text" required class=" form-control">
+                                    <label for="member_department">Member Department</label>
+                                    <input id="member_department" name="member_department" placeholder="Computer Science" type="text" required class=" form-control">
                                     <br>
                                     <label for="mc">Member Category</label>
-                                    <select class="form-control" required name="member_category" id="mc">
+                                    <select onchange="rest_hide_show()" class="form-control" required name="member_category" id="mc">
                                         <option value=""></option>
                                         <option value="CHIEF PATRON">CHIEF PATRON</option>
                                         <option value="TECHNICAL PATRON">TECHNICAL PATRON</option>
-                                        <option value="ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
+                                        <option value="INTERNATIONAL ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
                                         <option value="ORGANIZING COMMITTEE">ORGANIZING COMMITTEE</option>
                                     </select>
                                     <br>
+                                    <div id="organizing_subcommittee">
                                     <label for="Sub_committee">Organizing Sub-Committee (Optional)</label>
-                                    <select class="form-control" required name="member_category" id="committee_post">
-                                        <option value="">None</option>
-                                        <option value="Web_Media">Web & Media Sub-Committee</option>
-                                        <option value="publication">Publication Sub-Committee</option>
-                                        <option value="registration">Registration Sub-Committee</option>
-                                        <option value="finance">Finance Sub-Committee</option>
+                                    <select class="form-control"  name="sub_committee" id="Sub_committee">
+                                        <option value="none">None</option>
+                                        <option value="Web & Media Sub-Committee">Web & Media Sub-Committee</option>
+                                        <option value="Publication Sub-Committee">Publication Sub-Committee</option>
+                                        <option value="Registration Sub-Committee">Registration Sub-Committee</option>
+                                        <option value="Finance Sub-Committee">Finance Sub-Committee</option>
+                                        <option value="Local Arrangement Sub-Committee">Local Arrangement Sub-Committee</option>
                                     </select>
+                                </div>
                                     <br>
-                                    <label>Member Post</label>
-                                    <select class="form-control" required name="member_category" id="committee_post">
-                                        <option value=""></option>
+                                    <div id="member_post_d">
+                                    <label for="member_post">Member Post</label>
+                                    <select class="form-control"  name="member_post" id="member_post">
                                         <option value="Chair">Chair</option>
-                                        <option value="Co_chair">Co-chair</option>
+                                        <option value="Co-chair">Co-chair</option>
                                         <option value="Secretary">Secretary</option>
-                                        <option value="Members">Member</option>
+                                        <option value="Member">Member</option>
                                     </select>
+                                </div>
                                     <br>
                                     <label>Member Image</label>
-                                    <input type="file" required name="member_image" class="form-control">
+                                    <input type="file"  name="member_image" id="member_image" class="form-control">
                                     
                                     <br>
                                     <input type="submit" value="Add Committee Member" class="form-control btn btn-primary" >
@@ -107,6 +111,30 @@
         </div>
 
     </div>
+
+    <script>
+        document.getElementById("organizing_subcommittee").style.display="none";
+        document.getElementById("member_post_d").style.display="none";
+        function rest_hide_show()
+        {
+            var indicator = document.getElementById('mc').value;
+            if(indicator==="ORGANIZING COMMITTEE")
+            {
+            document.getElementById("organizing_subcommittee").style.display="block";
+            document.getElementById("member_post_d").style.display="block";
+            document.getElementById("member_image").style.display="none";
+            }
+            else
+            {
+                document.getElementById("organizing_subcommittee").style.display="none";
+                document.getElementById("member_post_d").style.display="none";
+                document.getElementById("member_image").style.display="block";
+
+            }
+        }
+
+    </script>
+
 </div>
 
     

@@ -303,6 +303,33 @@ class admin_controller extends Controller
         return view('admin.admin_panel.add_banner')->with('failed2','file not uploaded');
     }
 
+    public function add_committee_final(request $data)
+    {
+        $member_name = $data->member_name;
+        $member_university = $data->member_university;
+        $member_department = $data->member_department;
+        $member_category = $data->member_category;
+        $sub_committee = $data->sub_committee;
+        $member_post = $data->member_post;
+        //$member_image = $data->member_image;
+        if($data->hasfile('member_image'))
+        {
+            $member_image = $data->file('member_image')->getClientOriginalName();
+            $data->file('member_image')->move(public_path().'/iccie_all_web_file/iccie_image_gallery/member_image',$member_image);
+            $make_array = array('member_name'=>$member_name,'member_university'=>$member_university,'member_department'=>$member_department,'member_category'=>$member_category,'member_image'=>$member_image,'sub_committee'=>$sub_committee,'member_post'=>$member_post);
+            
+            DB::table('all_committee_members')->insert($make_array);
+            return back();
+
+        }
+        $make_array = array('member_name'=>$member_name,'member_university'=>$member_university,'member_department'=>$member_department,'member_category'=>$member_category,'member_image'=>'none','sub_committee'=>$sub_committee,'member_post'=>$member_post);
+        DB::table('all_committee_members')->insert($make_array);
+            
+
+
+        return back();
+    }
+
 
 
 

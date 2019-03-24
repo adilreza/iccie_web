@@ -59,6 +59,8 @@ Route::group(['prefix'=>'admin','middleware'=>'admin_permission'], function(){
     Route::post('/add_banner_title','admin_controller@add_banner_title');
     Route::post('/add_banner_home','admin_controller@add_banner_home');
 
+    Route::post('home/add_committee_final','admin_controller@add_committee_final');
+
 });
 
 

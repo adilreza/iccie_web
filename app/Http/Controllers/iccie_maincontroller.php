@@ -32,10 +32,15 @@ class iccie_maincontroller extends Controller
     }
     public function committee_member()
     {
-        $chief_member = DB::table('committee_members')->where('member_category','CHIEF PATRON')->get();
-        $technical_member = DB::table('committee_members')->where('member_category','TECHNICAL PATRON')->get();
-        $international_member = DB::table('committee_members')->where('member_category','INTERNATIONAL ADVISORY COMMITTEE')->orderBy('id','DESC')->get();
-        return view('committee_member')->with(['chief_member'=>$chief_member, 'technical_member'=>$technical_member,'international_member'=>$international_member]);
+        $chief_member = DB::table('all_committee_members')->where('member_category','CHIEF PATRON')->orderBy('id','DESC')->first();
+        $technical_member = DB::table('all_committee_members')->where('member_category','TECHNICAL PATRON')->orderBy('id','DESC')->get();
+        $international_member = DB::table('all_committee_members')->where('member_category','INTERNATIONAL ADVISORY COMMITTEE')->orderBy('id','DESC')->get();
+        $wm_sub_committee = DB::table('all_committee_members')->where('sub_committee','Web & Media Sub-Committee')->orderBy('id','DESC')->get();
+        $pub_sub_committee = DB::table('all_committee_members')->where('sub_committee','Publication Sub-Committee')->orderBy('id','DESC')->get();
+        $registration_sub_committee = DB::table('all_committee_members')->where('sub_committee','Registration Sub-Committee')->orderBy('id','DESC')->get();
+        $finance_sub_committee = DB::table('all_committee_members')->where('sub_committee','Finance Sub-Committee')->orderBy('id','DESC')->get();
+        $local_sub_committee = DB::table('all_committee_members')->where('sub_committee','Local Arrangement Sub-Committee')->orderBy('id','DESC')->get();
+        return view('committee_member')->with(['chief'=>$chief_member, 'technical_member'=>$technical_member,'international_member'=>$international_member,'wm_sub_committee'=>$wm_sub_committee,'pub_sub_committee'=>$pub_sub_committee,'registration_sub_committee'=>$registration_sub_committee,'finance_sub_committee'=>$finance_sub_committee, 'local_sub_committee'=>$local_sub_committee]);
     }
 
     
