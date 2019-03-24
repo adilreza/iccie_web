@@ -182,7 +182,7 @@ class admin_controller extends Controller
 
     public function add_committee()
     {
-        $all_member = DB::table('committee_members')->get();
+        $all_member = DB::table('all_committee_members')->get();
 
         return view('admin.admin_panel.add_committee')->with('all_member',$all_member);
     }
@@ -208,8 +208,8 @@ class admin_controller extends Controller
 
     public function delete_commitee_member($delete_id)
     {
-        DB::table('committee_members')->where('id',$delete_id)->delete();
-        $all_member = DB::table('committee_members')->get();
+        DB::table('all_committee_members')->where('id',$delete_id)->delete();
+        $all_member = DB::table('all_committee_members')->get();
         return back();
     }
 

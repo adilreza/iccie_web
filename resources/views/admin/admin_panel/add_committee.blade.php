@@ -57,7 +57,7 @@
                                     </select>
                                 </div>
                                     <br>
-                                    <label>Member Image</label>
+                                    <label id="member_image2">Member Image</label>
                                     <input type="file"  name="member_image" id="member_image" class="form-control">
                                     
                                     <br>
@@ -123,12 +123,14 @@
             document.getElementById("organizing_subcommittee").style.display="block";
             document.getElementById("member_post_d").style.display="block";
             document.getElementById("member_image").style.display="none";
+            document.getElementById("member_image2").style.display="none";
             }
             else
             {
                 document.getElementById("organizing_subcommittee").style.display="none";
                 document.getElementById("member_post_d").style.display="none";
                 document.getElementById("member_image").style.display="block";
+                document.getElementById("member_image2").style.display="block";
 
             }
         }
