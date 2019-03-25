@@ -311,6 +311,22 @@ class admin_controller extends Controller
         $member_category = $data->member_category;
         $sub_committee = $data->sub_committee;
         $member_post = $data->member_post;
+        if($member_department=="" )
+        {
+            $member_department=="None";
+        }
+        if($member_category=="" )
+        {
+            $member_category=="None";
+        }
+        if($member_post=="" )
+        {
+            $member_post=="None";
+        }
+        if($sub_committee=="" )
+        {
+            $sub_committee=="None";
+        }
         //$member_image = $data->member_image;
         if($data->hasfile('member_image'))
         {

@@ -21,24 +21,24 @@
                                     <input id="userName" name="member_name" placeholder="pro. Dr. md. Xyz" type="text" required class=" form-control">
                                     <br>
                                     <label for="member_university">Member University</label>
-                                    <input id="member_university" name="member_university" placeholder="Hirosima University, japan" type="text" required class=" form-control">
+                                    <input id="member_university" name="member_university" placeholder="Hirosima University" type="text" required class=" form-control">
                                     <br>
-                                    <label for="member_department">Member Department</label>
-                                    <input id="member_department" name="member_department" placeholder="Computer Science" type="text" required class=" form-control">
+                                    <label for="member_department">Member Country</label>
+                                    <input id="member_department" name="member_department" placeholder="Bangladesh" type="text" required class=" form-control">
                                     <br>
                                     <label for="mc">Member Category</label>
                                     <select onchange="rest_hide_show()" class="form-control" required name="member_category" id="mc">
                                         <option value=""></option>
                                         <option value="CHIEF PATRON">CHIEF PATRON</option>
                                         <option value="TECHNICAL PATRON">TECHNICAL PATRON</option>
-                                        <option value="INTERNATIONAL ADVISORY COMMITTEE">INTERNATIONAL ADVISORY COMMITTEE</option>
+                                        <option value="ADVISORY COMMITTEE">ADVISORY COMMITTEE</option>
                                         <option value="ORGANIZING COMMITTEE">ORGANIZING COMMITTEE</option>
                                     </select>
                                     <br>
                                     <div id="organizing_subcommittee">
                                     <label for="Sub_committee">Organizing Sub-Committee (Optional)</label>
                                     <select class="form-control"  name="sub_committee" id="Sub_committee">
-                                        <option value="none">None</option>
+                                        <option value="None">None</option>
                                         <option value="Web & Media Sub-Committee">Web & Media Sub-Committee</option>
                                         <option value="Publication Sub-Committee">Publication Sub-Committee</option>
                                         <option value="Registration Sub-Committee">Registration Sub-Committee</option>
@@ -50,6 +50,7 @@
                                     <div id="member_post_d">
                                     <label for="member_post">Member Post</label>
                                     <select class="form-control"  name="member_post" id="member_post">
+                                        <option value="None">None</option>
                                         <option value="Chair">Chair</option>
                                         <option value="Co-chair">Co-chair</option>
                                         <option value="Secretary">Secretary</option>
@@ -112,7 +113,7 @@
 
     </div>
 
-    <script>
+    {{-- <script>
         document.getElementById("organizing_subcommittee").style.display="none";
         document.getElementById("member_post_d").style.display="none";
         function rest_hide_show()
@@ -135,7 +136,7 @@
             }
         }
 
-    </script>
+    </script> --}}
 
 </div>
 
